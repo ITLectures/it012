@@ -33,4 +33,6 @@ Môn học cung cấp kiến thức cơ bản về:
 
 ---
 
-📌 **Ghi chú:** Mọi đóng góp về nội dung (nếu có sai sót, .., vui lòng tạo issue để tác giả sẽ cập nhật)
+**Lưu ý:** Bài giảng sẽ được cập nhật thường xuyên. Nếu phát hiện sai sót, vui lòng tạo *issue* hoặc báo lại để mình chỉnh sửa.  
+
+⭐ Nếu bạn thấy tài liệu hữu ích, hãy **star ⭐** dự án để ủng hộ nhé!
