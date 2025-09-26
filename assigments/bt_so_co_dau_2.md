@@ -51,3 +51,78 @@ Cho hai số nguyên 8 bit ở dạng bù 2:
 3. Xác định xem các phép toán trên có gây tràn số không, và giải thích.  
 
 ---
+
+# ➕ Biểu diễn số có dấu
+
+## Các cách biểu diễn (n bit)
+- **Sign–Magnitude (Dấu–Độ lớn)**  
+  - Bit MSB = dấu (0:+, 1:–)  
+  - Trị tuyệt đối lưu trong (n–1) bit còn lại  
+  - Nhược điểm: có 2 số 0 ( +0 và –0 )  
+
+- **One’s Complement (Bù 1)**  
+  - Số âm = đảo bit số dương tương ứng  
+  - Nhược điểm: vẫn có 2 số 0  
+
+- **Two’s Complement (Bù 2)**  
+  - Số âm = đảo bit rồi +1  
+  - Ưu điểm: chỉ có 1 số 0, dễ thực hiện phép toán  
+  - Được dùng phổ biến trong máy tính hiện nay  
+
+---
+
+# 🧮 Phép toán số có dấu
+
+- **Cộng/Trừ**: thực hiện như số nhị phân không dấu  
+  - Nếu dùng bù 2 thì cộng/trừ thống nhất  
+  - Trừ: A – B = A + (–B)  
+
+- **Ví dụ (4 bit bù 2):**  
+# 🔢 Biểu diễn số thực
+
+## 1. Fixed-Point (Số thực cố định)
+- Phần nguyên & phần thập phân được biểu diễn trên số bit cố định  
+- Đơn giản, tính toán nhanh  
+- Nhược điểm: **phạm vi hẹp, độ chính xác thấp**  
+- Thường dùng trong **hệ thống nhúng, DSP đơn giản**
+
+---
+
+## 2. Floating-Point (Số thực dấu phẩy động)
+- Dựa trên chuẩn **IEEE 754**  
+- Biểu diễn:  
+± 1.mantissa × 2^(exponent)
+- **Ưu điểm:**  
+- Biểu diễn phạm vi rất rộng  
+- Có độ chính xác cao  
+- **Nhược điểm:**  
+- Tính toán phức tạp, tốn tài nguyên phần cứng  
+- Dùng trong **khoa học, AI, đồ họa, tính toán chính xác cao**
+
+
+# ⚠️ Tràn số & Exception
+
+## Tràn số nguyên (Integer Overflow)
+- Xảy ra khi kết quả vượt tầm biểu diễn:  
+  Min = –2^(n–1), Max = 2^(n–1)–1  
+- **Máy tính thực tế:**  
+  - CPU chỉ bật **cờ tràn (OF – Overflow Flag)**  
+  - Kết quả tính toán theo modulo 2^n → **không tự sinh exception**  
+  - Ví dụ (8 bit, bù 2):  
+    ```
+    01111111 (127) + 00000001 (1) = 10000000 (–128)
+    ```
+
+## Tràn số thực (Floating Point Overflow)
+- Khi kết quả vượt chuẩn IEEE-754  
+- Có thể sinh:  
+  - **Exception** (Floating Point Exception)  
+  - Hoặc giá trị đặc biệt: **+∞, –∞, NaN**
+
+## Ngôn ngữ lập trình
+- **C/C++/Java:** không báo lỗi, kết quả wrap-around  
+- **Python, Ada, Rust (checked mode):** có thể sinh lỗi runtime  
+
+👉 Kết luận: Tràn số nguyên **thường không gây exception**,  
+chỉ có số thực mới dễ sinh lỗi hoặc giá trị đặc biệt.
+
