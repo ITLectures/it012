@@ -10,8 +10,8 @@
 - **Không sao chép** hoặc lấy bài của bạn khác.  
 - Khuyến khích trao đổi, thảo luận để hiểu sâu nội dung.
 
-## 3. Hình thức báo cáo
-- Báo cáo phải theo **mẫu quy định của khoa**.  
+## 3. Hình thức báo cáo 
+- [Báo cáo phải theo **mẫu quy định của khoa**.](./template)
 - Nội dung cần có:
   - Thông tin sinh viên: Họ tên, MSSV, Lớp, STT.  
   - Tên bài thực hành, số LAB, giảng viên hướng dẫn.  
