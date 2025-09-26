@@ -22,7 +22,7 @@ Môn học cung cấp kiến thức cơ bản về:
 6. **Biên dịch chương trình, cơ chế thực thi lệnh.**  
 7. **Bộ xử lý & Datapath.**  
 8. **Hiệu suất máy tính.**  
-9. **Thực hành:** [LogiSim](https://cburch.com/logisim/) (mạch số), MARS (mô phỏng lệnh, assembly, datapath). 
+9. **Thực hành:** [LogiSim](https://cburch.com/logisim/) (mạch số), MARS (mô phỏng lệnh, assembly, datapath). [Các bài hướng dẫn và mẫu tại đây](./labs)
 
 ---
 
